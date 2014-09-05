@@ -22,6 +22,7 @@ class sait_text extends sait {
     {
         parent::__construct(
                             $name,
+                            "text",
                             $caption,
                             $is_required,
                             $value,
