@@ -6,9 +6,10 @@
  */
 
 class sait_text extends sait {
-    public $size;
-    public $maxlength;
+    public $size;                       // Размер текстового поля
+    public $maxlength;                  // Максимальный размер вводимых данных
 
+// Конструктор класса
     function __construct(
                         $name,
                         $caption,
@@ -33,6 +34,7 @@ class sait_text extends sait {
         $this->size = $size;
         $this->maxlength =$maxlength;
     }
+
 // Метод возврата имени поля и тег управления
         function get_html() {
 // Учитываем переменные если они не пусты
@@ -66,6 +68,7 @@ class sait_text extends sait {
                                                   $this->help_url.">Помощь</a></span>";
             return array($this->caption, $tag, $help);
         }
+
 // Метод проверки корректности переданных данных
         function check() {
             if(!get_magic_quotes_gpc()) {
